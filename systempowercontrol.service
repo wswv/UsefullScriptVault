@@ -1,0 +1,9 @@
+[Unit]
+Description=relay control service
+After=network.target
+[Service]
+Type=simple
+ExecStart=bash /usr/local/bin/gpio_relay.sh
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
